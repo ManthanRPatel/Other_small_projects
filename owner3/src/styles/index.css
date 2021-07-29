@@ -1,0 +1,307 @@
+@import-normalize ;
+
+@import 'tailwind-base.css';
+
+body.no-animate *,
+body.no-animate *::before,
+body.no-animate *::after {
+    transition: none !important;
+    animation: none !important;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Muli, Roboto, Helvetica Neue, Arial, sans-serif;
+    background-color: #121212;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+h1, .h1 {
+    font-size: 24px;
+}
+
+h2, .h2 {
+    font-size: 20px;
+}
+
+h3, .h3 {
+    font-size: 16px;
+}
+
+h4, .h4 {
+    font-size: 15px;
+}
+
+h5, .h5 {
+    font-size: 13px;
+}
+
+h6, .h6 {
+    font-size: 12px;
+}
+
+.ps > .ps__rail-y,
+.ps > .ps__rail-x {
+    z-index: 99;
+}
+
+a[role=button] {
+    text-decoration: none;
+}
+
+[role="tooltip"] {
+    z-index: 999;
+}
+
+/* Medium Devices, Desktops Only */
+@media only screen and (min-width: 992px) {
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    ::-webkit-scrollbar:hover {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(0, 0, 0, 0.06);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border: 2px solid transparent;
+        box-shadow: inset 0 0 0 20px rgba(0, 0, 0, 0.24);
+        border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        box-shadow: inset 0 0 0 20px rgba(0, 0, 0, 0.37);
+        border-radius: 20px;
+    }
+}
+
+form label {
+    z-index: 99;
+}
+
+@keyframes autofill {
+    0%,100% {
+        background: transparent;
+    }
+}
+input:-webkit-autofill {
+    animation-delay: 1s;
+    animation-name: autofill!important;
+    animation-fill-mode: both;
+    -webkit-box-shadow:0 0 0 100px transparent inset!important;
+}
+
+/* for custom css input fields */
+label + .MuiInput-formControl {
+    margin-top: 4px;
+}
+
+.MuiFormLabel-root {
+    font-size: 1.3rem;
+}
+
+.MuiOutlinedInput-input {
+    padding: 11px 14px;
+    /* padding: 12.5px 14px; */
+}
+
+.MuiInputLabel-outlined {
+    transform: translate(14px, 13px) scale(1);
+}
+
+.MuiOutlinedInput-multiline {
+    padding: 4.5px 4px;
+}
+
+.makeStyles-placeholder-835 {
+    font-size: 13px;
+}
+
+.disabledSelectBox > div > div > div > div > p {
+    color: #9E9E9E
+}
+/* .disabledSelectBox > div > div > div > div {
+    background-color: red;
+} */
+
+.responsiveTable tbody tr {
+    border: 1px solid #E1DADA !important;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 40em) {
+    .modifyButton {
+        display: none !important;
+    }
+    .modifyButtonShow {
+        display: flex !important;
+    }
+    .showCitySateText {
+        display: none !important;
+    }
+    .showCityText {
+        display: flex !important;
+    }
+    .chipText {
+        display: flex flex-column !important;
+    }
+    .chipPadding {
+        margin-left: 0px !important;
+    }
+    .tableMargin {
+        margin-top: 16px !important;
+    }
+    .showChipRightView {
+        display: flex !important;
+        justify-content: right !important;
+    }
+    .showTextRight {
+        text-align: right !important;
+    }
+    .viewAllPadding {
+        padding-right: 0px !important;
+    }
+}
+@media screen and (min-width: 40em) {
+    .modifyButtonShow {
+        display: none !important;
+    }
+    .showCityText {
+        display: none !important;
+    }
+    .chipText {
+        display: flex !important;
+    }
+    .chipPadding {
+        margin-left: 4px !important;
+    }
+    .tableMargin {
+        margin-top: 32px !important;
+    }
+    .showTextRightView {
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+    .viewAllPadding {
+        padding-right: 18% !important;
+    }
+}
+/* @media screen and (max-width: 1024px) {
+    .modifyButton {
+        display: none !important;
+    }
+} */
+/* @media screen and (max-width: 1024px) {
+    .modifyButtonShow {
+        display: block !important;
+    }
+} */
+
+/* .makeStyles-singleValue-1022 {
+    font-size: 14px;
+} */
+
+/* .ant-table table */
+/* .table {
+    width: '100%' !important;
+}
+
+.ant-table {
+    color: #BDBDBD !important;
+}
+
+.ant-table-thead > tr > th{
+    background-color: #37474F !important;
+    color: white !important;
+}
+
+.ant-pagination {
+    background-color: #37474F !important;
+    padding: 0.25rem !important;
+}
+
+.ant-pagination-options {
+    display: inline !important;
+}
+
+.ant-pagination-item-link {
+    background-color: #37474F !important; 
+}
+
+.ant-select-selection {
+    background-color: #37474F !important;
+    color: white !important;
+}
+
+.ant-pagination-item {
+    background-color: #37474F !important;
+    color: white !important;
+}
+
+.ant-pagination-item-active {
+    color: white !important;
+    border-color:  white !important;
+}
+
+.anticon {
+    color: white !important; 
+}
+
+.ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+    /* background-color: cyan !important; */
+/* color: #000000 !important;
+}
+
+.withRouter\(Connect\(Component\)\)-root-1 a:not([role=button]) {
+    color: white !important;
+}
+
+.withRouter\(Connect\(Component\)\)-root-1484 a:not([role=button]) {
+    color: white !important;
+}
+
+.withRouter\(Connect\(Component\)\)-root-1754 a:not([role=button]) {
+    color: white !important;
+}
+
+.withRouter\(Connect\(Component\)\)-root-788 a:not([role=button]) {
+    color: white !important;
+}
+
+.withRouter\(Connect\(Component\)\)-root-1754 a:not([role=button]) {
+    color: white !important;
+}
+
+.ant-pagination-item-active a {
+    color: white !important;
+}
+
+.ant-pagination-item-ellipsis {
+    color: white !important;
+} */
+
+@import 'print.css';
+
+@import 'tables.css';
+
+@import 'react-table.css';
+
+@import 'prism.css';
+
+@import 'tailwind.css';

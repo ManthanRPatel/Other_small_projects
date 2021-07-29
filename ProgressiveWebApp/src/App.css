@@ -1,0 +1,25 @@
+body{
+    /* background-color: rgb(35, 11, 63); */
+    color: rgb(20, 28, 36);
+    text-align: center;
+}
+.App{
+    /* background-color: rgb(35, 11, 63); */
+    color: rgb(26, 30, 34);
+    margin: 5px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(167, 94, 0);
+}
+h2{
+    font-family: sans-serif;
+    color: rgb(3, 111, 126);
+}
+li{
+    color: rgb(196, 196, 13);
+}
+label{
+    color: rgb(70, 46, 46);
+    font-size: 25px;
+}
